@@ -15,11 +15,19 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    will-change: transform; /* Optimize for GPU */
+    transform: translateZ(0); /* Force GPU acceleration */
+    /* Set explicit height and prevent content from affecting height */
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
 .about-section .content {
     text-align: left;
     z-index: 2;
+    /* Make content position absolute to prevent it from affecting container height */
+    position: relative;
 
     .social_icons {
         display: flex;

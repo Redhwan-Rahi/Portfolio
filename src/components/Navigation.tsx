@@ -17,11 +17,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
-const navItems = [['Expertise', 'expertise'], ['Career', 'career'], ['Projects', 'projects']];
+const navItems = [['Expertise', 'expertise'], ['Career', 'career'], ['Projects', 'projects'], ['Resume', 'resume']];
 
-function Navigation({parentToChild, modeChange}: any) {
+function Navigation({parentToChild, modeChange, toggleResume}: any) {
 
-  const {mode} = parentToChild;
+  const {mode, showResume} = parentToChild;
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -48,12 +48,26 @@ function Navigation({parentToChild, modeChange}: any) {
 
   const scrollToSection = (section: string) => {
     console.log(section)
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
+    if (section === 'resume') {
+      // For Resume, we want to show the Resume component
+      toggleResume(true);
     } else {
-      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
+      // For other sections, first hide Resume if it's showing
+      if (showResume) {
+        toggleResume(false);
+      }
+      
+      // Small delay to ensure the main content is rendered before scrolling
+      setTimeout(() => {
+        // For other sections, continue with the existing scrolling behavior
+        const expertiseElement = document.getElementById(section);
+        if (expertiseElement) {
+          expertiseElement.scrollIntoView({ behavior: 'smooth' });
+          console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
+        } else {
+          console.error(`Element with id "${section}" not found`);  // Debugging: Log error if element is not found
+        }
+      }, 100);
     }
   };
 

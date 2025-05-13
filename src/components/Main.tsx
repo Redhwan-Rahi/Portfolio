@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../assets/styles/Main.scss';
 import person from '../assets/images/person.jpg';
-
+import bgDark from '../assets/images/bg-dark.png';
 
 function Main() {
+  useEffect(() => {
+    // Preload the background image
+    const img = new Image();
+    img.src = bgDark;
+  }, []);
 
   return (
     <div className="container">

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.210c266b.css",
-    "main.js": "/Portfolio/static/js/main.e253f102.js",
-    "static/js/453.b05d8aa5.chunk.js": "/Portfolio/static/js/453.b05d8aa5.chunk.js",
-    "static/media/mock02.png": "/Portfolio/static/media/mock02.55d494aed69f61f42879.png",
-    "static/media/bg-light.png": "/Portfolio/static/media/bg-light.bac0efb485244a522981.png",
-    "static/media/bg-dark.png": "/Portfolio/static/media/bg-dark.f420c6b8458af72de935.png",
-    "static/media/amex-logo.png": "/Portfolio/static/media/amex-logo.46e3872cc1d690423e24.png",
-    "static/media/cognizant-softvision-logo.png": "/Portfolio/static/media/cognizant-softvision-logo.7f610f1d7bda3ada7e07.png",
-    "static/media/redis-icon.png": "/Portfolio/static/media/redis-icon.8abbcd54c178719a9ddb.png",
-    "static/media/nextjs-icon.png": "/Portfolio/static/media/nextjs-icon.9f8054a6dc0837262000.png",
-    "index.html": "/Portfolio/index.html",
-    "main.210c266b.css.map": "/Portfolio/static/css/main.210c266b.css.map",
-    "main.e253f102.js.map": "/Portfolio/static/js/main.e253f102.js.map",
-    "453.b05d8aa5.chunk.js.map": "/Portfolio/static/js/453.b05d8aa5.chunk.js.map"
+    "main.css": "/static/css/main.6a9c531c.css",
+    "main.js": "/static/js/main.d929b0b6.js",
+    "static/js/453.b05d8aa5.chunk.js": "/static/js/453.b05d8aa5.chunk.js",
+    "static/media/mock02.png": "/static/media/mock02.55d494aed69f61f42879.png",
+    "static/media/bg-light.png": "/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/bg-dark.png": "/static/media/bg-dark.f420c6b8458af72de935.png",
+    "static/media/amex-logo.png": "/static/media/amex-logo.46e3872cc1d690423e24.png",
+    "static/media/cognizant-softvision-logo.png": "/static/media/cognizant-softvision-logo.7f610f1d7bda3ada7e07.png",
+    "static/media/redis-icon.png": "/static/media/redis-icon.8abbcd54c178719a9ddb.png",
+    "static/media/nextjs-icon.png": "/static/media/nextjs-icon.9f8054a6dc0837262000.png",
+    "index.html": "/index.html",
+    "main.6a9c531c.css.map": "/static/css/main.6a9c531c.css.map",
+    "main.d929b0b6.js.map": "/static/js/main.d929b0b6.js.map",
+    "453.b05d8aa5.chunk.js.map": "/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.210c266b.css",
-    "static/js/main.e253f102.js"
+    "static/css/main.6a9c531c.css",
+    "static/js/main.d929b0b6.js"
   ]
 }

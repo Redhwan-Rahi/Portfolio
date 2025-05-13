@@ -1,13 +1,3 @@
-.timeline-section {
-    padding: 2rem 0;
-    
-    h1 {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 2.5rem;
-    }
-}
-
 .vertical-timeline {
     span {
         font-family: 'Courier Prime', monospace;
@@ -17,7 +7,6 @@
         color: #222;
         font-size: 15px;
         line-height: 1.8;
-        margin-top: 15px;
     }
 
     .vertical-timeline-element {
@@ -50,8 +39,6 @@
             padding-bottom: 12px;
             margin-bottom: 15px;
             position: relative;
-            min-height: 70px;
-            padding-right: 120px;
         }
     
         .company-name {
@@ -70,7 +57,7 @@
             
             img {
                 max-height: 65px;
-                max-width: 110px;
+                max-width: 220px;
                 object-fit: contain;
             }
         }
@@ -86,80 +73,5 @@
         color: #222;
         margin-top: 10px;
         font-weight: 600;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .vertical-timeline {
-        .vertical-timeline-element {
-            .company-header {
-                padding-right: 0;
-                padding-bottom: 80px;
-                min-height: auto;
-            }
-            
-            .company-logo {
-                top: auto;
-                bottom: 10px;
-                right: 0;
-                left: 0;
-                text-align: left;
-                
-                img {
-                    max-height: 50px;
-                    max-width: 150px;
-                }
-            }
-            
-            p {
-                font-size: 14px;
-                line-height: 1.6;
-            }
-        }
-    }
-    
-    .vertical-timeline-element-content {
-        margin-left: 0;
-        padding: 1em !important;
-        
-        p {
-            word-wrap: break-word;
-        }
-    }
-}
-
-/* Extra small devices */
-@media screen and (max-width: 480px) {
-    .timeline-section h1 {
-        font-size: 1.8rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .vertical-timeline {
-        width: 95%;
-        max-width: 1170px;
-        
-        .vertical-timeline-element {
-            .vertical-timeline-element-title {
-                font-size: 1.1rem;
-            }
-            
-            .vertical-timeline-element-subtitle {
-                font-size: 0.9rem;
-            }
-            
-            p {
-                font-size: 13px;
-                line-height: 1.5;
-            }
-            
-            .company-logo img {
-                max-width: 120px;
-            }
-        }
-    }
-    
-    .vertical-timeline-element-content {
-        padding: 0.8em !important;
     }
 }

@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.cec1edbd.css",
-    "main.js": "/static/js/main.4ed8529a.js",
+    "main.js": "/static/js/main.c03c7656.js",
     "static/js/453.b05d8aa5.chunk.js": "/static/js/453.b05d8aa5.chunk.js",
     "static/media/mock02.png": "/static/media/mock02.55d494aed69f61f42879.png",
     "static/media/bg-light.png": "/static/media/bg-light.bac0efb485244a522981.png",
     "static/media/bg-dark.png": "/static/media/bg-dark.f420c6b8458af72de935.png",
     "static/media/person.jpg": "/static/media/person.124264ae72a66b9856b2.jpg",
-    "static/media/Redhwan_Rahi_Resume.pdf": "/static/media/Redhwan_Rahi_Resume.b94bb72e421bc3403e70.pdf",
+    "static/media/Redhwan_Rahi_Resume.pdf": "/static/media/Redhwan_Rahi_Resume.baf04dd7bba8c9c7628d.pdf",
     "static/media/amex-logo.png": "/static/media/amex-logo.46e3872cc1d690423e24.png",
     "static/media/cognizant-softvision-logo.png": "/static/media/cognizant-softvision-logo.7f610f1d7bda3ada7e07.png",
     "static/media/redis-icon.png": "/static/media/redis-icon.8abbcd54c178719a9ddb.png",
     "static/media/nextjs-icon.png": "/static/media/nextjs-icon.9f8054a6dc0837262000.png",
     "index.html": "/index.html",
     "main.cec1edbd.css.map": "/static/css/main.cec1edbd.css.map",
-    "main.4ed8529a.js.map": "/static/js/main.4ed8529a.js.map",
+    "main.c03c7656.js.map": "/static/js/main.c03c7656.js.map",
     "453.b05d8aa5.chunk.js.map": "/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cec1edbd.css",
-    "static/js/main.4ed8529a.js"
+    "static/js/main.c03c7656.js"
   ]
 }

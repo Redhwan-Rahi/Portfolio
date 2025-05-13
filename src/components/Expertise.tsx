@@ -77,7 +77,6 @@ function Expertise() {
               Leveraged state-of-the-art language models and vector stores to build conversational agents and intelligent retrieval systems—integrating OpenAI to turn natural language into actionable data queries.
             </p>
             <br />
-            <br />
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
               {labelsThird.map((label, index) => (

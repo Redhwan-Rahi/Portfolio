@@ -10,9 +10,9 @@ import cognizantLogo from '../assets/images/cognizant-softvision-logo.png';
 
 function Timeline() {
   return (
-    <div id="career">
+    <div id="experience">
       <div className="items-container">
-        <h1>Career History</h1>
+        <h1>Experience</h1>
         <VerticalTimeline>
           {/* Software Engineer II */}
           <VerticalTimelineElement

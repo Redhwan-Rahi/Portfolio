@@ -37,13 +37,17 @@ function Timeline() {
               </div>
             </div>
             <p style={{ color: '#222', lineHeight: '1.8', marginTop: '15px', fontSize: '15px' }}>
-              • Integrated OpenAI APIs into internal search platform<br />
-              • Developed Spring Boot API for bulk shipping label generation, saving over 1200 engineering hours/month<br />
-              • Engineered support platform with chatbot, scheduling, and FAQ searches (115K daily views)<br />
-              • Built email & push notification system using Jakarta Mail and Cron jobs<br />
-              • Developed reservation & availability system with Kotlin, Ktor, and Exposed<br />
-              • Created React/Redux module for consistent error & downtime messaging<br />
-              • Designed RESTful APIs with Spring Boot and Swagger
+              • Integrated OpenAI’s APIs into an internal search platform used by all American Express employees, enabling natural-language
+queries that reduced average search time by 40%, saving colleagues over 2,000 hours annually
+              • Designed and delivered a unified support platform featuring an AI driven chatbot, on demand in person scheduling, and a
+              searchable FAQ knowledge base that drives 100K+ daily interactions and accelerates issue resolution for colleagues
+              • Led migration of a production database from Microsoft SQL Server to PostgreSQL refactoring backend services for full feature
+              parity, cutting licensing costs by 50% and saving over $30K per month
+              • Modernized internal search architecture by migrating from Solr to Elasticsearch, optimizing indexing pipelines for 1M records,
+              enhancing query precision and enabling advanced data analytics through Kibana dashboards and vector-based relevance
+              scoring
+              • Integrated internal engineering workflows with ServiceNow, streamlining incident tracking, request intake, and operational
+              visibility across multiple enterprise applications
             </p>
           </VerticalTimelineElement>
 
@@ -63,19 +67,24 @@ function Timeline() {
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <div className="company-header">
-              <h3 className="vertical-timeline-element-title">Software Engineer III</h3>
+              <h3 className="vertical-timeline-element-title">Software Engineer I</h3>
               <h4 className="vertical-timeline-element-subtitle">New York, NY</h4>
               <div className="company-logo">
                 <img src={amexLogo} alt="American Express Logo" />
               </div>
             </div>
             <p style={{ color: '#222', lineHeight: '1.8', marginTop: '15px', fontSize: '15px' }}>
-              • Developed internal event & room reservation app, reducing workflow by 40%<br />
-              • Integrated Slack API for hiring manager email group management, boosting efficiency by 60%<br />
-              • Created and maintained GitHub Actions CI/CD workflows<br />
-              • Managed deployments to internal cloud platforms with automated releases<br />
-              • Led backend authentication & authorization standards across engineering teams<br />
-              • Spearheaded cloud migration, achieving 99.9% uptime
+              • Engineered a device reservation and availability system using Kotlin, Ktor, and Exposed on Microsoft SQL Server facilitating
+100+ monthly events globally and handling around 2000 attendees per event, automating reservation and attendance
+workflows, and producing detailed reports
+              • Collaborated cross-functionally with hiring managers and IT to launch a Slack app, automating access controls and reducing
+              admin time by 60%
+              • Led platform health initiatives for both front end and back end of five applications, identifying and remediating nearly 500
+              security vulnerabilities driving critical findings to zero and bolstering overall system resilience
+              • Designed and implemented REST APIs using Spring Boot and Swagger for documentation, facilitating seamless integration
+              with third-party services and improving data accessibility across platforms
+              • Developed a Spring Boot API with advanced SQL queries to automate bulk shipping label generation, saving over 1200
+              engineering hours per month
             </p>
           </VerticalTimelineElement>
 

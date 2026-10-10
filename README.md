@@ -1,3 +1,28 @@
-# Developer Portfolio 🚀
+# Redhwan Rahi — Portfolio
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Node.js](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+A fast, responsive portfolio focused on product outcomes, selected work, and full-stack engineering experience. Built with React, TypeScript, Vite, and Sass; deployed as a static site at [redhwan.com](https://redhwan.com).
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+## Quality checks
+
+```bash
+npm run typecheck
+npm run build
+npm audit
+```
+
+The production build is emitted to `dist/`. Images used above the fold and in the main case study are optimized WebP assets with explicit dimensions. The interface supports persisted light/dark themes, reduced motion, keyboard navigation, semantic landmarks, and responsive layouts from mobile through wide desktop.
+
+## Deployment
+
+The repository retains its custom-domain GitHub Pages setup. To build and publish the current branch:
+
+```bash
+npm run deploy
+```

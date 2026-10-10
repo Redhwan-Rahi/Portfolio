@@ -1,0 +1,145 @@
+.site-header {
+  position: fixed;
+  z-index: 100;
+  inset: 0 0 auto;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  transition: border-color 200ms ease, background-color 200ms ease, backdrop-filter 200ms ease;
+}
+
+.site-header.is-scrolled {
+  border-color: var(--line);
+  background: var(--header);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+.scroll-progress {
+  --scroll-progress: 0;
+  position: absolute;
+  inset: auto 0 -1px;
+  height: 2px;
+  background: var(--mint);
+  transform: scaleX(var(--scroll-progress));
+  transform-origin: left;
+}
+
+.nav-shell {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-mark {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: baseline;
+  font-size: 1.05rem;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.brand-mark span {
+  color: var(--mint);
+}
+
+.primary-nav,
+.nav-links,
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.primary-nav {
+  gap: 26px;
+}
+
+.nav-links {
+  gap: 6px;
+}
+
+.nav-links a {
+  position: relative;
+  padding: 10px 12px;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  font-weight: 650;
+  transition: color 180ms ease;
+}
+
+.nav-links a::after {
+  position: absolute;
+  inset: auto 12px 5px;
+  height: 1px;
+  background: var(--mint);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current='location'] {
+  color: var(--text);
+}
+
+.nav-links a[aria-current='location']::after {
+  transform: scaleX(1);
+}
+
+.nav-resume {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 15px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 720;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.nav-resume:hover {
+  border-color: var(--mint);
+  background: var(--surface);
+}
+
+.nav-resume svg {
+  width: 15px;
+  height: 15px;
+}
+
+.nav-actions {
+  gap: 8px;
+}
+
+.icon-button {
+  display: inline-grid;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.icon-button:hover {
+  border-color: var(--line-strong);
+  background: var(--surface);
+  transform: rotate(4deg);
+}
+
+.icon-button svg {
+  width: 19px;
+  height: 19px;
+}
+
+.menu-toggle {
+  display: none;
+}

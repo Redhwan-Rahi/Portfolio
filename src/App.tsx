@@ -1,66 +1,69 @@
-import React, {useState, useEffect} from "react";
-import {
-  Main,
-  Timeline,
-  Expertise,
-  Project,
-  Contact,
-  Navigation,
-  Footer,
-  Resume
-} from "./components";
-import FadeIn from './components/FadeIn';
-import './index.scss';
+import { useEffect, useState } from 'react';
+import Expertise from './components/Expertise';
+import Footer from './components/Footer';
+import Impact from './components/Impact';
+import Main from './components/Main';
+import Navigation, { type Theme } from './components/Navigation';
+import Project from './components/Project';
+import Timeline from './components/Timeline';
+
+function getInitialTheme(): Theme {
+  const savedTheme = window.localStorage.getItem('rr-theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme;
+  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+}
 
 function App() {
-    const [mode, setMode] = useState<string>('dark');
-    const [showResume, setShowResume] = useState<boolean>(false);
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
-    const handleModeChange = () => {
-        if (mode === 'dark') {
-            setMode('light');
-        } else {
-            setMode('dark');
-        }
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem('rr-theme', theme);
+
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    themeMeta?.setAttribute('content', theme === 'dark' ? '#0b0f0d' : '#f3f1e9');
+  }, [theme]);
+
+  useEffect(() => {
+    const elements = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'));
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      elements.forEach((element) => element.classList.add('is-visible'));
+      return undefined;
     }
 
-    const handleShowResume = (show: boolean) => {
-        setShowResume(show);
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    };
-
-    useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-        
-        // Listen for the showResume custom event
-        const handleShowResumeEvent = () => {
-            handleShowResume(true);
-        };
-        
-        window.addEventListener('showResume', handleShowResumeEvent);
-        
-        return () => {
-            window.removeEventListener('showResume', handleShowResumeEvent);
-        };
-    }, []);
-
-    return (
-    <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
-        <Navigation parentToChild={{mode, showResume}} modeChange={handleModeChange} toggleResume={handleShowResume}/>
-        {showResume ? (
-            <Resume />
-        ) : (
-            <FadeIn transitionDuration={700}>
-                <Main/>
-                <Expertise/>
-                <Timeline/>
-                <Project/>
-                {/* <Contact/> */}
-            </FadeIn>
-        )}
-        <Footer />
-    </div>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: '0px 0px -8%', threshold: 0.12 },
     );
+
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="site-frame">
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
+      <Navigation theme={theme} onThemeToggle={() => setTheme((current) => (current === 'dark' ? 'light' : 'dark'))} />
+      <main id="main-content">
+        <Main />
+        <Impact />
+        <Project />
+        <Timeline />
+        <Expertise />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

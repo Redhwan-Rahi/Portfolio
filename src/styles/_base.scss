@@ -1,0 +1,227 @@
+:root {
+  color-scheme: dark;
+  --page: #0b0f0d;
+  --page-soft: #101511;
+  --surface: #151b17;
+  --surface-raised: #1a221d;
+  --text: #f1f4ef;
+  --text-soft: #b3bdb4;
+  --text-faint: #7e8980;
+  --line: rgba(238, 245, 238, 0.14);
+  --line-strong: rgba(238, 245, 238, 0.24);
+  --violet: #947dff;
+  --violet-strong: #7c5cff;
+  --mint: #73f2c5;
+  --shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
+  --header: rgba(11, 15, 13, 0.82);
+  --radius-lg: 32px;
+  --radius-md: 20px;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --page: #f3f1e9;
+  --page-soft: #ebe9e1;
+  --surface: #faf9f4;
+  --surface-raised: #ffffff;
+  --text: #111512;
+  --text-soft: #505953;
+  --text-faint: #737d76;
+  --line: rgba(17, 21, 18, 0.14);
+  --line-strong: rgba(17, 21, 18, 0.24);
+  --violet: #6548e6;
+  --violet-strong: #5637df;
+  --mint: #14a779;
+  --shadow: 0 30px 80px rgba(34, 31, 25, 0.14);
+  --header: rgba(243, 241, 233, 0.86);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+  background: var(--page);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--page);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+button,
+a {
+  color: inherit;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: var(--mint);
+  color: #0a1510;
+}
+
+:focus-visible {
+  outline: 3px solid var(--mint);
+  outline-offset: 4px;
+}
+
+.site-frame {
+  min-height: 100vh;
+  overflow: clip;
+  background: var(--page);
+  transition: background-color 250ms ease, color 250ms ease;
+}
+
+.section-shell,
+.nav-shell {
+  width: min(1240px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 14px;
+  left: 14px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--mint);
+  color: #09120e;
+  font-weight: 750;
+  transform: translateY(-180%);
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.section-kicker,
+.eyebrow,
+.project-meta,
+.float-kicker,
+.metric-index,
+.capability-number {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.section-kicker {
+  margin-bottom: 18px;
+  color: var(--violet);
+}
+
+.button {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 20px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.93rem;
+  font-weight: 720;
+  line-height: 1;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.button svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.button-primary {
+  background: var(--mint);
+  color: #0a1510;
+}
+
+.button-primary:hover {
+  background: #a2ffdd;
+}
+
+.button-secondary {
+  border-color: var(--line-strong);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+}
+
+.button-secondary:hover {
+  border-color: var(--text-soft);
+  background: var(--surface);
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal-delay='1'] {
+  transition-delay: 120ms;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
